@@ -1,38 +1,37 @@
 // Import styles of packages that you've installed.
 // All packages except `@mantine/hooks` require styles imports
 import '@mantine/core/styles.css';
-import { MantineProvider } from '@mantine/core';
-import { AppShell, Burger, Group, Skeleton } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { createTheme, MantineProvider } from '@mantine/core';
+import { useMantineColorScheme, Button, AppShell, Group, Text} from '@mantine/core';
 
 export default function App() {
-  const [opened, { toggle }] = useDisclosure();
-  
+
+  const theme = createTheme({
+    fontFamily: 'Open Sans, sans-serif',
+    primaryColor: 'cyan',
+  });
+
   return (
-    <MantineProvider>
+    <MantineProvider defaultColorScheme="dark" theme={theme}>
       <AppShell
-      header={{ height: { base: 60, md: 70, lg: 80 } }}
-      navbar={{
-        width: { base: 200, md: 300, lg: 400 },
-        breakpoint: 'sm',
-        collapsed: { mobile: !opened },
-      }}
+      header={{ height: { base: 60, md: 70, lg: 100 } }}
       padding="md"
     >
       <AppShell.Header>
         <Group h="100%" px="md">
-          <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+        <Text
+          size="xl"
+          fw={900}
+          variant="gradient"
+          gradient={{ from: 'blue', to: 'cyan', deg: 270 }}
+          >
+          Anas Peerzada
+        </Text>
         </Group>
       </AppShell.Header>
-      <AppShell.Navbar p="md">
-        Navbar
-        {Array(15)
-          .fill(0)
-          .map((_, index) => (
-            <Skeleton key={index} h={28} mt="sm" animate={false} />
-          ))}
-      </AppShell.Navbar>
-      <AppShell.Main>Main</AppShell.Main>
+      <AppShell.Main>
+        There will be content here soon
+      </AppShell.Main>
       </AppShell>
     </MantineProvider>
   );
