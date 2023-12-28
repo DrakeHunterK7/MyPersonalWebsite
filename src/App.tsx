@@ -2,7 +2,7 @@
 // All packages except `@mantine/hooks` require styles imports
 import '@mantine/core/styles.css';
 import { createTheme, MantineProvider } from '@mantine/core';
-import { useMantineColorScheme, Button, AppShell, Group, Text} from '@mantine/core';
+import { AppShell, Group, Text} from '@mantine/core';
 
 export default function App() {
 
