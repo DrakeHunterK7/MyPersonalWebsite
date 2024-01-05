@@ -1,7 +1,7 @@
 // Import styles of packages that you've installed.
 // All packages except `@mantine/hooks` require styles imports
 import '@mantine/core/styles.css';
-import { Center, Box, MantineProvider, createTheme, SegmentedControl, Stack, Image, Group, Text, Flex} from '@mantine/core';
+import { Center, MantineProvider, createTheme, SegmentedControl, Stack, Image, Group, Text, Flex} from '@mantine/core';
 import { useState } from 'react';
 import myPhoto from "../src/assets/me.png";
 import myCoolerPhoto from "../src/assets/mebutcooler.png";
@@ -30,10 +30,10 @@ export default function App() {
         justifyContent: "center",
         alignItems: "center",
         verticalAlign: "center", 
-        backgroundColor: value==='anas' ? "#0f0f0f ": theme.colors['pale-violet'][6]}}>
+        backgroundColor: value==='anas' ? "#0f0f0f": "pale-violet.9"}}>
         <Flex
           mih={50}
-          bg={value==='anas' ? theme.colors['black'][9] : theme.colors['pale-violet'][9]}
+          bg={value==='anas' ? "black.9" : "pale-violet.9"}
           gap="md"
           justify="center"
           align="center"
@@ -58,7 +58,7 @@ export default function App() {
               <SegmentedControl
               value={value}
               onChange={setValue}
-              color={value==='anas' ? theme.colors['black'][7] : theme.colors['pale-violet'][7]}
+              color={value==='anas' ? "black.7" : "pale-violet.7"}
               data={[
                 { label: 'Anas', value: 'anas' },
                 { label: 'Cooler Anas', value: 'cooleranas' }
@@ -74,7 +74,7 @@ export default function App() {
                 size="xl"
                 fw={900}
                 variant="gradient"
-                gradient={{ from: theme.colors['bright-pink'][4], to: theme.colors['bright-pink'][2], deg: 180 }}
+                gradient={{ from: "bright-pink.4", to: "bright-pink.2", deg: 180 }}
               >
                 My purpose in life is to have fun and do nothing productive.
               </Text>
