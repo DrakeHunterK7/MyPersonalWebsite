@@ -1,7 +1,7 @@
 // Import styles of packages that you've installed.
 // All packages except `@mantine/hooks` require styles imports
 import '@mantine/core/styles.css';
-import { Center, Box, MantineProvider, createTheme, SegmentedControl, Stack, Image, Group, Text, Flex} from '@mantine/core';
+import { Center, MantineProvider, createTheme, SegmentedControl, Stack, Image, Group, Text, Flex} from '@mantine/core';
 import { useState } from 'react';
 import myPhoto from "../src/assets/me.png";
 import myCoolerPhoto from "../src/assets/mebutcooler.png";
