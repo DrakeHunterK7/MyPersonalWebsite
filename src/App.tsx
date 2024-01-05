@@ -50,7 +50,6 @@ export default function App() {
                 radius="md"
                 h="auto"
                 w="25vw"
-                miw="10rem"
                 fit="contain"
                 src={value==='anas' ? myPhoto : myCoolerPhoto}
               />
