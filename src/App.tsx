@@ -30,11 +30,11 @@ export default function App() {
         justifyContent: "center",
         alignItems: "center",
         verticalAlign: "center", 
-        backgroundColor: value==='anas' ? "#0f0f0f": "pale-violet.9"}}>
+        backgroundColor: value==='anas' ? "#0f0f0f": "purple"}}>
         <Flex
           mih={50}
           bg={value==='anas' ? "black.9" : "pale-violet.9"}
-          gap="md"
+          gap="xs"
           justify="center"
           align="center"
           direction="row"
@@ -44,12 +44,13 @@ export default function App() {
           h="fit-content"
         >
           <Group gap="xl">
-            <Center maw={400} >
+            <Center >
             <Stack>
               <Image
                 radius="md"
                 h="auto"
                 w="25vw"
+                miw="10rem"
                 fit="contain"
                 src={value==='anas' ? myPhoto : myCoolerPhoto}
               />
@@ -65,12 +66,11 @@ export default function App() {
               />
             </Stack>
           </Center>
-          <Center w="25vw" maw={400} ta="center">
+          <Center w="25vw" ta="center">
             {
             value==='anas' 
             ? <Text fs="italic">My purpose in life is to make something better.</Text>
             : <Text
-                size="xl"
                 fw={900}
                 variant="gradient"
                 gradient={{ from: "bright-pink.4", to: "bright-pink.2", deg: 180 }}
